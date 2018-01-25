@@ -12,18 +12,10 @@ android {
     }
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
-    signingConfigs {
 
-        release {
-            keyAlias "test123"
-            keyPassword "test123"
-            storeFile file("../app/release.jks")
-            storePassword "test123"
-        }
-    }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+          
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
